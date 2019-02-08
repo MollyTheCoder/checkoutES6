@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+  <title>Checkout</title>
+</head>
+<body>
+  <div id="step1">
+    <div class="container"> 
+      <div class="row">
+        <div class="col">
+            <form action="" id="step1">
+                <h2>Shipping Address</h2>
+                <div class="address-picker">                 
+                  <select id="AddressPicker">
+                    <option value="1">Address 1</option>
+                    <option value="2">Address 2</option>
+                    <option value="3">Address 3</option>
+                    <option value="4">Address 4</option>
+                    <option value="5">Address 5</option>
+                  </select>
+                </div>
+                <div id="shipping-address-readonly">
+                  <!-- <p>St. Monica<br>Los Angeles, CA 90201<br>United States of America<br>user@test.com<br>555-555-5555</p> -->
+                </div>
+                <div id="shipping-address" class="d-none">
+                  <input type="text" name="EcomOrderDeliveryName" id="EcomOrderDeliveryName">
+                  <input type="text" name="EcomOrderDeliveryCompany" id="EcomOrderDeliveryCompany">                  
+                  <input type="email" name="EcomOrderDeliveryEmail" id="EcomOrderDeliveryEmail">
+                  <input type="text" name="EcomOrderDeliveryPhone" id="EcomOrderDeliveryPhone">
+                  <input type="text" name="EcomOrderDeliveryAddress" id="EcomOrderDeliveryAddress">
+                  <input type="text" name="EcomOrderDeliveryAddress2" id="EcomOrderDeliveryAddress2">
+                  <input type="text" name="EcomOrderDeliveryCity" id="EcomOrderDeliveryCity">
+                  <select name="EcomOrderDeliveryRegion" id="EcomOrderDeliveryRegion" class="region">        
+                  </select>
+                  <input type="text" name="EcomOrderDeliveryZip" id="EcomOrderDeliveryZip">
+                  <select name="EcomOrderDeliveryCountry" id="EcomOrderDeliveryCountry" class="country">        
+                  </select>
+                  <div id="saveAddress">
+                    <label><input type="checkbox" /> Save address</label>
+                  </div>
+                  <!-- <div><p><strong>Work in Progress:</strong> Changing inputs when addresses are editable to change the order summary</p></div>
+                  <div><p><strong>Work in Progress:</strong> Countries without regions to change region select to input (Australia)</p></div> -->
+                </div>
+                <div id="editShippingAddress">
+                  <label><input type="checkbox" /> Edit shipping address</label>
+                </div>                
+                <h2>Billing Address</h2>
+                <div id="billingIsSameAsShipping">
+                  <label><input type="checkbox" checked /> Billing address is same as delivery address</label>
+                </div>
+                <div id="billing-address" class="d-none">
+                  <input type="text" name="EcomOrderCustomerName" id="EcomOrderCustomerName">
+                  <input type="text" name="EcomOrderCustomerCompany" id="EcomOrderCustomerCompany">             
+                  <input type="email" name="EcomOrderCustomerEmail" id="EcomOrderCustomerEmail">
+                  <input type="text" name="EcomOrderCustomerPhone" id="EcomOrderCustomerPhone">
+                  <input type="text" name="EcomOrderCustomerAddress" id="EcomOrderCustomerAddress">
+                  <input type="text" name="EcomOrderCustomerAddress2" id="EcomOrderCustomerAddress2">
+                  <input type="text" name="EcomOrderCustomerCity" id="EcomOrderCustomerCity">
+                  <select name="EcomOrderCustomerRegion" id="EcomOrderCustomerRegion" class="region">        
+                  </select>
+                  <input type="text" name="EcomOrderCustomerZip" id="EcomOrderCustomerZip">
+                  <select name="EcomOrderCustomerCountry" id="EcomOrderCustomerCountry" class="country">        
+                  </select>
+                  <!-- <div><p><strong>Work in Progress:</strong> Changing inputs when addresses are editable to change the order summary</p></div>
+                  <div><p><strong>Work in Progress:</strong> Countries without regions to change region select to input (Australia)</p></div> -->
+                </div>
+                <div class="action">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+
+              
+        </div>
+        <div class="col-3">
+          <div id="summary">
+            <h4>Shipping address</h4>
+            <div id="summary-shipping">
+              <!-- <p>St. Monica<br>Los Angeles, CA 90201<br>United States of America<br>user@test.com<br>555-555-5555</p> -->
+            </div>            
+            <h4>Billing address</h4>
+            <div id="summary-billing">
+              <!-- <p>St. Monica<br>Los Angeles, CA 90201<br>United States of America<br>user@test.com<br>555-555-5555</p> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
